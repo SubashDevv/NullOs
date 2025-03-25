@@ -1,0 +1,123 @@
+*{
+        padding: 0;
+        margin: 0;
+}
+body{
+    background-color: rgb(14, 14, 14);
+    display: flex;
+    justify-content: center;
+    background-image: url("walll.jpg");
+    background-size: auto;
+    cursor: pointer;
+    height: 100vh;
+    width: 100vw;
+}
+#bottomBar{
+    height: 7vh;
+    width: 100vw;
+    background-color:#282626 ;
+    position: fixed;
+    bottom: -1px;
+    left: 0px;
+    border-top: 2px solid #c1c1c1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    animation: opacityDrop 0.25s 0s ease-out forwards;
+}
+#quickApps{
+    display: flex;
+    gap: 15%;
+    width: 75%;
+    justify-content: center;
+    @media(width<=700){
+        gap: 7%;
+    }
+
+
+}
+.quickApp{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.75em;
+    @media(width<=700){
+        font-size: 1em;;
+    }
+}
+#moreOptions{
+    font-size: 1.75em;
+    color: aliceblue;
+    @media(width<=700){
+        font-size: 1em;;
+    }
+}
+.quickApp:hover{
+    border-bottom: 2px solid whitesmoke;
+}
+#moreOptions:hover,#moreOptions:active{
+color: rgba(97, 247, 247, 0.886);
+
+}
+#dateTime{
+    width: 12.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+    animation: opacityDrop 0.5s 0s ease-out forwards;
+}
+#desktop{
+    height: 73vh;
+    width: 90vw;
+    border: 2px solid white;
+    margin-top: 8vh;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5%;
+    animation: opacityDrop 0.4s 0s ease-out forwards;
+ 
+}
+.apps{
+    height:fit-content;
+    max-height:15vh;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color:rgb(231, 195, 195);
+
+}
+a{
+    text-decoration: none;
+    height: fit-content;
+}
+pre{
+    font-size: 1em;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(223, 220, 220);
+    text-shadow: 2px 2px 2px black;
+}
+@keyframes opacityDrop{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@media(width<=700px){
+    #dateTime{
+    position:fixed;
+    top: 2vh;
+    right: 8vw;
+    font-size: 2em;
+
+}
+#date{
+    display: none;
+}
+}

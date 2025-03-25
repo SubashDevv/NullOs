@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#logo{
+    height: 20vh;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    @media(width<=900px){
+        height: 27vh;
+        width: 80vw;    
+    }
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0;
+    animation: opacityChanger 1s 0.75s ease-in-out 1 forwards; 
+
+}
+#container{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    height: 80%;
+    width: 80%;
+    @media(width<=900px){
+        flex-direction: column;  
+        justify-content:space-between;           
+            }
+}
+.text{
+    color: aliceblue;
+    font-size: 3.5em;
+    font-weight: 600;
+    font-family:Arial, Helvetica, sans-serif;
+    text-shadow: 2px 1px 4px beige;
+    opacity: 0;  
+    animation: opacityChanger 3s 0.75s ease-in-out 1 forwards; 
+    @media(width>=900px){
+        font-size: 2em;      
+            }
+     @media(width<=480px){
+                font-size: 2em;      
+     }  
+   
+}
+#animatedLines{
+    z-index: 2;
+    height: 100vh;
+    overflow: hidden;
+    width: auto;
+}
+#upperLine{
+    height: 50vh;
+    width: 100vw;
+    background-color: black;
+    border-bottom: 1vh solid whitesmoke;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    animation: uMove 1s ease-in-out .5s 1 forwards;
+
+}
+#lowerLine{
+    height: 50vh;
+    width: 100vw;
+    background-color: black;
+    border-top: 1vh solid whitesmoke;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    animation: lMove 1s ease-in-out .5s 1 forwards;
+
+}
+@keyframes uMove{
+    from{
+         top: 0px;     
+    }
+    to{
+       top: -51vh;
+    }
+}
+@keyframes lMove{
+    from{
+         bottom: 0px;     
+    }
+    to{
+       bottom: -51vh;
+    }
+}
+@keyframes opacityChanger{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
