@@ -48,7 +48,7 @@ save.addEventListener("click",()=>{
         pass=document.querySelector("#pass").value.trim();
         currbg=bottomBar.style.backgroundColor;
         currtheme=document.querySelector("i").style.color;
-        if(pass!=null){        localStorage.setItem("pass",pass);}
+        if(pass!=""){        localStorage.setItem("pass",pass);}
         localStorage.setItem("bg",currbg);
         localStorage.setItem("theme",currtheme);
 })
