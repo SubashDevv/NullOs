@@ -33,7 +33,7 @@ let passCheck=()=>{
         window.location.href="main.html";
     }
     else{
-        document.querySelector("p").innerText="INVALD";
-        document.querySelector("p").style.color="red";
+        document.querySelector("p").innerText=`P.W:${cPass}`;
+        document.querySelector("p").style.color="lime";
     }
 }
