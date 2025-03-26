@@ -64,7 +64,7 @@ nums.forEach((number)=>{
            {
               score+=15;
               score_html.innerText=score;
-            //   timerr+=1;
+              timerr+=2;
            }
            else{
             score-=30
