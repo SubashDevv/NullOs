@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="main.css">
 <body>
+
+    <div id="overlay"></div>
     <div id="desktop">
         <a href="game.html">
         <div class="apps">
@@ -29,9 +31,44 @@
         </div>
     </a>
     </div>
+    <div id="moreToggle">
+        <div id="setting"><i class="fa-solid fa-gear"></i></div>
+        <div id="aboutUs"><i class="fa-solid fa-circle-info"></i></div>
+        <div id="logOut"><i class="fa-solid fa-right-from-bracket"></i></div>
+        <div class="exit"><i class="fa-solid fa-circle-xmark"></i></div>
+    </div>
+    <div id="settingToggle">
+        <div id="theme"class="settingItem">
+            <p>THEME</p>
+            <div class="colors">
+                <div class="red themes"></div>
+                <div class="yellow themes"></div>
+                <div class="pink themes"></div>
+                <div class="blue themes"></div>
+            </div>
+        </div>
+        <div id="password" class="settingItem">
+        <p>PASSWORD</p>
+        <input id="pass"type="password">
+     </div>
+         <div id="backgroundColor"class="settingItem">
+            <p>BACKGROUND</p>
+            <div class="colors">
+                <div class="red bg"></div>
+                <div class="yellow bg"></div>
+                <div class="pink bg"></div>
+                <div class="blue bg"></div>
+            </div>
+         </div>
+         <div id="saveNdefault">
+            <div id="default"><p>DEFAULT</p></div>
+         <div id="save"><p>SAVE</p></div>
+        </div>
+    </div>
     <div id="bottomBar">
         <div id="moreOptions">
             <i class="fa-solid fa-bars"></i>
+            
         </div>
         <div id="quickApps">
             <a href="https://www.google.com"><i class="fa-brands fa-google quickApp" ></i></a>

@@ -101,12 +101,178 @@ pre{
     color: rgb(223, 220, 220);
     text-shadow: 2px 2px 2px black;
 }
+#moreToggle{
+   height: 7vh;
+   width: 25vw;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   background-color: #282626;
+   border: 2px solid whitesmoke;
+   position:absolute;
+   top: -7.5vh;
+   align-self: center;
+   border-radius: 15px;
+   color: aliceblue;
+   font-size: 1.75em;
+   z-index: 4;
+}
+.exit{
+    font-size: 0.75em;
+    position: absolute;
+    top: 5%;
+    right: 2%;
+}
+#overlay{
+    height: 100vh;
+    width: 100vw;
+display: none;
+
+    background-color: #2826267f;
+    z-index: 2;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+#setting:hover,#setting:active,#logOut:hover,#aboutUs:hover{
+    border-bottom: 2px solid white;
+}
+#settingToggle{
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    top: -51vh;
+    align-self: center;
+    background-color: #282626;
+    border: 2px solid white;
+    z-index: 3;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+p,input{
+    font-size: 1.5em;
+    color: aliceblue;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+}
+input{
+    color: black;
+}
+#saveNdefault{
+    height: 25%;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#save,#default{
+    height: 50%;
+    width: 25%;
+    background-color: #282626;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    font-size: 0.75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+}
+#save{
+    background-color: rgb(18, 212, 147);
+}
+#default{
+    background-color: rgb(212, 183, 18);
+}
+.settingItem{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    width: auto;
+}
+.colors{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    width:50% ;
+}
+.red{
+    background-color: rgb(203, 12, 12);
+    height: 100%;
+    width: 20%;
+}
+.yellow{
+    background-color: rgb(187, 229, 17);
+    height: 100%;
+    width: 20%;
+}
+.pink{
+    background-color: rgb(203, 12, 174);
+    height: 100%;
+    width: 20%;
+}
+.blue{
+    background-color: rgb(18, 49, 228);
+    height: 100%;
+    width: 20%;
+}
+.red:active,.yellow:active,.pink:active,.blue:active{
+    opacity: 0.5;
+}
+#save:active,#save:hover{
+    background-color: aquamarine;
+}
+#default:active,#default:hover{
+    opacity: 0.75;
+}
 @keyframes opacityDrop{
     from{
         opacity: 0;
     }
     to{
         opacity: 1;
+    }
+}
+@keyframes toggle{
+    from{
+        top: -7.5vh;
+    }
+    to{
+        top: 1.5vh;
+    }
+}
+@keyframes antiToggle{
+    from{
+        top: 1.5vh;
+    }
+    to{
+        
+        top: -7.5vh;
+    }
+}
+@keyframes settingToggle{
+    from{
+        top: -51vh;
+    }
+    to{
+        
+        top:15vh;
+    }
+}
+@keyframes settingAntiToggle{
+    from{
+        top:15vh;
+
+    }
+    to{
+        
+        top: -51vh;
     }
 }
 @media(width<=700px){
@@ -120,4 +286,17 @@ pre{
 #date{
     display: none;
 }
+#moreToggle{
+    font-size: 1.25em;
+    width: 45vw;
+}
+#settingToggle{
+    width: 80vw;
+}
+
+}
+@media(width<=900px){
+    .settingItem{
+        flex-direction: column;
+    }
 }
