@@ -20,7 +20,7 @@ document.querySelector("#playAgain").addEventListener(("click"),()=>{
     endScreen.style.zIndex=-1;
 })
 document.querySelector("#skip").addEventListener("click",()=>{
-    score-=5;
+    score-=15;
     randomFunc(nums,target);
     score_html.innerText=score;
     if(score<0){
@@ -62,12 +62,12 @@ nums.forEach((number)=>{
         let rand_num=number.innerText;
           if(rand_target==rand_num)
            {
-              score+=10;
+              score+=15;
               score_html.innerText=score;
-              timerr+=1;
+            //   timerr+=1;
            }
            else{
-            score-=10
+            score-=30
             score_html.innerText=score;
            }
        randomFunc(nums,target);
